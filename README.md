@@ -13,6 +13,8 @@ Step 1: Navigate command prompt to directory "TestCases_Folder"
 Step 2: Type this below command to execute 
     Robot -d '${CURDIR}\..\Results' user_registration_verification.robot
     
+  RESULT will be published to Results folder
+    
 -------------------------------------------**********************--------------------------------------    
  Assignment Two API Testing has been implemented in pytest Framework format
  Steps to Execute:
@@ -20,6 +22,10 @@ Step 2: Type this below command to execute
 Step 1: Navigate command prompt to directory "TestCases_Folder"
 Step 2: Type this below command to execute 
            pytest
+           
+           
+ RESULT will be published in terminal and all test_'files' will be executed
+ 
  
  
  
