@@ -14,7 +14,7 @@ You can also cover Browser compatibility by navigating to File "locator.py" and 
 ### Assignment One Web UI Automation
 Steps to Execute:
 
-1. Navigate command prompt to directory "TestCases_Folder"
+1. Launch Command Prompt and Navigate to directory "TestCases_Folder" of this assignment
 2. Type this below command to execute and hit enter 
        
             
@@ -26,7 +26,7 @@ Steps to Execute:
  #### Assignment Two API Testing has been implemented in pytest Framework format
  Steps to Execute:
 
-1. Navigate command prompt to directory "TestCases_Folder"
+1. Launch Command Prompt and Navigate to directory "TestCases_Folder" of this assignment
 2. Type this below command to execute and hit enter
 
 
