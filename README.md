@@ -4,7 +4,8 @@ Attended Assessment for Signant Health
 Assignment for Signant Health has been completed and code stored in Master branch of this repository
 
 ## Requirements Two important things to be done before executing scripts
-1. Navigate to this folder and replace chrome driver.exe file with the version of your chrome SignantHealth-Assignment/Resources/WebUI/driver
+1. Navigate to this folder mentioned belowand replace chrome driver.exe file with the version of your chrome 
+        SignantHealth-Assignment/Resources/WebUI/driver
 2. There is Requirements.txt file please make sure softwares are installed
 
 
@@ -13,7 +14,7 @@ Assignment for Signant Health has been completed and code stored in Master branc
 Steps to Execute:
 
 Step 1: Navigate command prompt to directory "TestCases_Folder"
-Step 2: Type this below command to execute 
+Step 2: Type this below command to execute and hit enter 
     Robot -d '${CURDIR}\..\Results' user_registration_verification.robot
     
   RESULT will be published to Results folder
@@ -23,7 +24,7 @@ Step 2: Type this below command to execute
  Steps to Execute:
 
 Step 1: Navigate command prompt to directory "TestCases_Folder"
-Step 2: Type this below command to execute 
+Step 2: Type this below command to execute and hit enter
            pytest
            
            
