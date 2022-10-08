@@ -4,16 +4,18 @@ Library   String
 Variables  ${CURDIR}/../Page_Objects/locator.py
 Resource   ${CURDIR}/Register_keywords.robot
 Resource   ${CURDIR}/Login_keywords.robot
+Library   ${CURDIR}/getdriverpath.py
 
 
 *** *** Variables ***
-${driver_path}   ${CURDIR}/../driver/chromedriver.exe
+${driver_path}   ${CURDIR}/../driver
 ${server_url}   http://127.0.0.1:8080/
 
 *** Keywords ***
 
 Launch Demo App
-    Create Webdriver    Chrome    executable_path=${driver_path}
+    ${driver_path}   get_driver_path_with_browser   ${browser_name}
+    Create Webdriver    ${browser_name}    executable_path=${driver_path}
     Go To  ${server_url}
 
 

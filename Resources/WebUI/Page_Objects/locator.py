@@ -11,3 +11,17 @@ table_username = '//td[@id="username"]'
 table_firstname = '//td[@id="firstname"]'
 table_lastname = '//td[@id="lastname"]'
 table_phone = '//td[@id="phone"]'
+
+
+
+
+
+############## Browser Name ####################
+browser_name = 'Chrome'
+# browser_name = 'ie'
+# browser_name = 'edge'
+# browser_name = 'firefox'
+
+
+
+
