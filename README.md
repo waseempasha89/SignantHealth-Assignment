@@ -4,7 +4,7 @@ Attended Assessment for Signant Health
 Assignment for Signant Health has been completed and code stored in Master branch of this repository
 
 ## Requirements Two important things to be done before executing scripts
-1. Navigate to this folder mentioned belowand replace chrome driver.exe file with the version of your chrome 
+1. Navigate to this folder mentioned below and replace chrome driver.exe file with the version of your chrome 
         SignantHealth-Assignment/Resources/WebUI/driver
 2. There is Requirements.txt file please make sure softwares are installed
 
