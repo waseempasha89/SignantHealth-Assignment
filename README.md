@@ -7,15 +7,8 @@ Assignment for Signant Health has been completed and code stored in Master branc
 1. There is Requirements.txt file please make sure softwares are installed
 
 ## Browser Compatibility
-You can also cover Browser compatibility by navigating to File "locator.py" and uncommenting which ever browser you have to test (Example for chrome mentioned below)
+You can also cover Browser compatibility by navigating to File "locator.py" and uncommenting which ever browser you have to test
 
-
-
-############## Browser Name ####################
-browser_name = 'Chrome'
-browser_name = 'ie'
-browser_name = 'edge'
-browser_name = 'firefox'
 
 
 ### Assignment One Web UI Automation
