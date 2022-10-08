@@ -3,11 +3,16 @@ Attended Assessment for Signant Health
 
 Assignment for Signant Health has been completed and code stored in Master branch of this repository
 
-## Requirements Two important things to be done before executing scripts
-1. Navigate to this folder mentioned below and replace chrome driver.exe file with the version of your chrome 
-        SignantHealth-Assignment/Resources/WebUI/driver
-2. There is Requirements.txt file please make sure softwares are installed
+## Requirements
+1. There is Requirements.txt file please make sure softwares are installed
 
+## Browser Compatibility
+You can also cover Browser compatibility by navigating to File "locator.py" and uncommenting which ever browser you have to test (Example for chrome mentioned below)
+############## Browser Name ####################
+browser_name = 'Chrome'
+# browser_name = 'ie'
+# browser_name = 'edge'
+# browser_name = 'firefox'
 
 
 ### Assignment One Web UI Automation
