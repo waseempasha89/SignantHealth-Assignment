@@ -6,9 +6,6 @@ Assignment for Signant Health has been completed and code stored in Master branc
 ## Requirements
 1. There is Requirements.txt file please make sure softwares are installed
 
-## Browser Compatibility
-You can also cover Browser compatibility by navigating to File "locator.py" and uncommenting which ever browser you have to test
-
 
 
 ### Assignment One Web UI Automation
@@ -34,6 +31,12 @@ Steps to Execute:
            
            
  RESULT will be published in terminal and all test_'files' will be executed
+ 
+-------------------------------------------------***************************------------------------------------
+## Browser Compatibility
+You can also cover Browser compatibility by navigating to File "locator.py" and uncommenting which ever browser you have to test
+
+
  
  
  
