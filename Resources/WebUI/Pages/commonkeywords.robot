@@ -8,7 +8,6 @@ Library   ${CURDIR}/getdriverpath.py
 
 
 *** *** Variables ***
-${driver_path}   ${CURDIR}/../driver
 ${server_url}   http://127.0.0.1:8080/
 
 *** Keywords ***

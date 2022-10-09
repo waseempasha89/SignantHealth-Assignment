@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221009 16:38:36.519" rpa="false" schemaversion="3">
+<suite id="s1" name="User Registration Verification" source="C:\Users\banual\Desktop\Signant_Health_Assignment\TestCases_Folder\user_registration_verification.robot">
+<test id="s1-t1" name="Register User In Demo App" line="7">
+<kw name="Launch Demo App" library="commonkeywords">
+<kw name="Get Driver Path With Browser" library="getdriverpath">
+<var>${driver_path}</var>
+<arg>${browser_name}</arg>
+<msg timestamp="20221009 16:38:36.834" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20221009 16:38:37.652" level="INFO">Get LATEST chromedriver version for google-chrome 106.0.5249</msg>
+<msg timestamp="20221009 16:38:38.600" level="INFO">Driver [C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe] found in cache</msg>
+<msg timestamp="20221009 16:38:38.600" level="INFO">C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe</msg>
+<msg timestamp="20221009 16:38:38.600" level="INFO">${driver_path} = C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe</msg>
+<status status="PASS" starttime="20221009 16:38:36.834" endtime="20221009 16:38:38.600"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser_name}</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20221009 16:38:38.600" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221009 16:38:38.600" endtime="20221009 16:38:40.038"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${server_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221009 16:38:40.039" level="INFO">Opening url 'http://127.0.0.1:8080/'</msg>
+<status status="PASS" starttime="20221009 16:38:40.038" endtime="20221009 16:38:40.225"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:36.833" endtime="20221009 16:38:40.225"/>
+</kw>
+<kw name="Verify Demo app Is Launced" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//a[contains(text(),'Demo app')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//a[contains(text(),'Demo app')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221009 16:38:40.265" level="INFO">Element '//a[contains(text(),'Demo app')]' is displayed.</msg>
+<status status="PASS" starttime="20221009 16:38:40.227" endtime="20221009 16:38:40.265"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.226" endtime="20221009 16:38:40.265"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.226" endtime="20221009 16:38:40.265"/>
+</kw>
+<kw name="Generate userdetails" library="commonkeywords">
+<kw name="Generate Random String" library="String">
+<var>${username}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221009 16:38:40.266" level="INFO">${username} = XgREvUfo</msg>
+<status status="PASS" starttime="20221009 16:38:40.266" endtime="20221009 16:38:40.266"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${password}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221009 16:38:40.266" level="INFO">${password} = rSaTs8KN</msg>
+<status status="PASS" starttime="20221009 16:38:40.266" endtime="20221009 16:38:40.266"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${firstname}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221009 16:38:40.266" level="INFO">${firstname} = 3MTrQXiw</msg>
+<status status="PASS" starttime="20221009 16:38:40.266" endtime="20221009 16:38:40.266"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${lastname}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221009 16:38:40.270" level="INFO">${lastname} = 0hfwvcBP</msg>
+<status status="PASS" starttime="20221009 16:38:40.270" endtime="20221009 16:38:40.270"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${phone}</var>
+<arg>10</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221009 16:38:40.270" level="INFO">${phone} = 9151510653</msg>
+<status status="PASS" starttime="20221009 16:38:40.270" endtime="20221009 16:38:40.270"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${username}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221009 16:38:40.270" level="INFO">${username} = XgREvUfo</msg>
+<status status="PASS" starttime="20221009 16:38:40.270" endtime="20221009 16:38:40.270"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${password}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221009 16:38:40.270" level="INFO">${password} = rSaTs8KN</msg>
+<status status="PASS" starttime="20221009 16:38:40.270" endtime="20221009 16:38:40.270"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${firstname}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221009 16:38:40.270" level="INFO">${firstname} = 3MTrQXiw</msg>
+<status status="PASS" starttime="20221009 16:38:40.270" endtime="20221009 16:38:40.274"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${lastname}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221009 16:38:40.274" level="INFO">${lastname} = 0hfwvcBP</msg>
+<status status="PASS" starttime="20221009 16:38:40.274" endtime="20221009 16:38:40.274"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${phone}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221009 16:38:40.274" level="INFO">${phone} = 9151510653</msg>
+<status status="PASS" starttime="20221009 16:38:40.274" endtime="20221009 16:38:40.274"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.266" endtime="20221009 16:38:40.274"/>
+</kw>
+<kw name="Clicking Register Link" library="Register_keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.274" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.274" endtime="20221009 16:38:40.469"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.274" endtime="20221009 16:38:40.469"/>
+</kw>
+<kw name="Verify Register Page Is Open" library="Register_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[contains(text(),'Register')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[contains(text(),'Register')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221009 16:38:40.508" level="INFO">Element '//h1[contains(text(),'Register')]' is displayed.</msg>
+<status status="PASS" starttime="20221009 16:38:40.471" endtime="20221009 16:38:40.508"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.471" endtime="20221009 16:38:40.508"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.471" endtime="20221009 16:38:40.508"/>
+</kw>
+<kw name="Input UserName" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${username_loc}</arg>
+<arg>${username}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_loc}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.509" level="INFO">Typing text 'XgREvUfo' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.509" endtime="20221009 16:38:40.618"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.509" endtime="20221009 16:38:40.618"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.509" endtime="20221009 16:38:40.619"/>
+</kw>
+<kw name="Input Password" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${password_loc}</arg>
+<arg>${password}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_loc}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.621" level="INFO">Typing text 'rSaTs8KN' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.620" endtime="20221009 16:38:40.718"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.620" endtime="20221009 16:38:40.718"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.620" endtime="20221009 16:38:40.718"/>
+</kw>
+<kw name="Input FirstName" library="Register_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${firstname_loc}</arg>
+<arg>${firstname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${firstname_loc}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.719" level="INFO">Typing text '3MTrQXiw' into text field '//input[@name="firstname"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.719" endtime="20221009 16:38:40.808"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.719" endtime="20221009 16:38:40.808"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.719" endtime="20221009 16:38:40.808"/>
+</kw>
+<kw name="Input FamilyName" library="Register_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${lastname_loc}</arg>
+<arg>${lastname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastname_loc}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.810" level="INFO">Typing text '0hfwvcBP' into text field '//input[@name="lastname"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.810" endtime="20221009 16:38:40.900"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.809" endtime="20221009 16:38:40.900"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.808" endtime="20221009 16:38:40.900"/>
+</kw>
+<kw name="Input Phone" library="Register_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${phone_loc}</arg>
+<arg>${phone}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${phone_loc}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:40.902" level="INFO">Typing text '9151510653' into text field '//input[@name="phone"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:40.902" endtime="20221009 16:38:41.004"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.901" endtime="20221009 16:38:41.004"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:40.901" endtime="20221009 16:38:41.004"/>
+</kw>
+<kw name="Click Submit Button" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Click Element</arg>
+<arg>${submit_loc}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_loc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:41.005" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:41.005" endtime="20221009 16:38:41.553"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:41.005" endtime="20221009 16:38:41.553"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221009 16:38:44.565" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221009 16:38:41.554" endtime="20221009 16:38:44.565"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:41.004" endtime="20221009 16:38:44.565"/>
+</kw>
+<kw name="Verify Login Page Is Open" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[contains(text(),'Log In')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[contains(text(),'Log In')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221009 16:38:44.589" level="INFO">Element '//h1[contains(text(),'Log In')]' is displayed.</msg>
+<status status="PASS" starttime="20221009 16:38:44.566" endtime="20221009 16:38:44.589"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:44.566" endtime="20221009 16:38:44.589"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:44.566" endtime="20221009 16:38:44.589"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221009 16:38:44.589" endtime="20221009 16:38:46.776"/>
+</kw>
+<doc>This test case is used to Register User In Demo App</doc>
+<status status="PASS" starttime="20221009 16:38:36.831" endtime="20221009 16:38:46.778"/>
+</test>
+<test id="s1-t2" name="Verifying User After Registering In Demo App" line="24">
+<kw name="Launch Demo App" library="commonkeywords">
+<kw name="Get Driver Path With Browser" library="getdriverpath">
+<var>${driver_path}</var>
+<arg>${browser_name}</arg>
+<msg timestamp="20221009 16:38:46.784" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20221009 16:38:47.665" level="INFO">Get LATEST chromedriver version for google-chrome 106.0.5249</msg>
+<msg timestamp="20221009 16:38:48.687" level="INFO">Driver [C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe] found in cache</msg>
+<msg timestamp="20221009 16:38:48.687" level="INFO">C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe</msg>
+<msg timestamp="20221009 16:38:48.687" level="INFO">${driver_path} = C:\Users\banual\.wdm\drivers\chromedriver\win32\106.0.5249\chromedriver.exe</msg>
+<status status="PASS" starttime="20221009 16:38:46.784" endtime="20221009 16:38:48.687"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser_name}</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20221009 16:38:48.687" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221009 16:38:48.687" endtime="20221009 16:38:50.101"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${server_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221009 16:38:50.102" level="INFO">Opening url 'http://127.0.0.1:8080/'</msg>
+<status status="PASS" starttime="20221009 16:38:50.101" endtime="20221009 16:38:50.302"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:46.784" endtime="20221009 16:38:50.303"/>
+</kw>
+<kw name="Verify Demo app Is Launced" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//a[contains(text(),'Demo app')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//a[contains(text(),'Demo app')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221009 16:38:50.361" level="INFO">Element '//a[contains(text(),'Demo app')]' is displayed.</msg>
+<status status="PASS" starttime="20221009 16:38:50.305" endtime="20221009 16:38:50.361"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.304" endtime="20221009 16:38:50.361"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.303" endtime="20221009 16:38:50.361"/>
+</kw>
+<kw name="Click On LogIn Link" library="Login_keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log In</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:50.363" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20221009 16:38:50.362" endtime="20221009 16:38:50.458"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.362" endtime="20221009 16:38:50.458"/>
+</kw>
+<kw name="Verify Login Page Is Open" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[contains(text(),'Log In')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[contains(text(),'Log In')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221009 16:38:50.491" level="INFO">Element '//h1[contains(text(),'Log In')]' is displayed.</msg>
+<status status="PASS" starttime="20221009 16:38:50.459" endtime="20221009 16:38:50.491"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.459" endtime="20221009 16:38:50.491"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.458" endtime="20221009 16:38:50.491"/>
+</kw>
+<kw name="Input UserName" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${username_loc}</arg>
+<arg>${username}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_loc}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:50.493" level="INFO">Typing text 'XgREvUfo' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:50.493" endtime="20221009 16:38:50.572"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.492" endtime="20221009 16:38:50.572"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.492" endtime="20221009 16:38:50.572"/>
+</kw>
+<kw name="Input Password" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Input Text</arg>
+<arg>${password_loc}</arg>
+<arg>${password}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_loc}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:50.574" level="INFO">Typing text 'rSaTs8KN' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:50.574" endtime="20221009 16:38:50.660"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.574" endtime="20221009 16:38:50.660"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.574" endtime="20221009 16:38:50.660"/>
+</kw>
+<kw name="Click Submit Button" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Click Element</arg>
+<arg>${submit_loc}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_loc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:50.661" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221009 16:38:50.661" endtime="20221009 16:38:51.221"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.661" endtime="20221009 16:38:51.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221009 16:38:54.233" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221009 16:38:51.221" endtime="20221009 16:38:54.233"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:50.661" endtime="20221009 16:38:54.233"/>
+</kw>
+<kw name="Verify Username" library="verification">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${username_form}</var>
+<arg>${table_username}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:54.278" level="INFO">${username_form} = XgREvUfo</msg>
+<status status="PASS" starttime="20221009 16:38:54.233" endtime="20221009 16:38:54.278"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${username_form}</arg>
+<arg>${username}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221009 16:38:54.278" endtime="20221009 16:38:54.278"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.233" endtime="20221009 16:38:54.278"/>
+</kw>
+<kw name="Verify FirstName" library="verification">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${firstname_form}</var>
+<arg>${table_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:54.301" level="INFO">${firstname_form} = 3MTrQXiw</msg>
+<status status="PASS" starttime="20221009 16:38:54.280" endtime="20221009 16:38:54.301"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${firstname_form}</arg>
+<arg>${firstname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221009 16:38:54.301" endtime="20221009 16:38:54.302"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.279" endtime="20221009 16:38:54.302"/>
+</kw>
+<kw name="Verify FamilyName" library="verification">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${lastname_form}</var>
+<arg>${table_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:54.325" level="INFO">${lastname_form} = 0hfwvcBP</msg>
+<status status="PASS" starttime="20221009 16:38:54.302" endtime="20221009 16:38:54.325"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${lastname_form}</arg>
+<arg>${lastname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221009 16:38:54.325" endtime="20221009 16:38:54.325"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.302" endtime="20221009 16:38:54.325"/>
+</kw>
+<kw name="Verify Phone" library="verification">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${phone_form}</var>
+<arg>${table_phone}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:54.345" level="INFO">${phone_form} = 9151510653</msg>
+<status status="PASS" starttime="20221009 16:38:54.326" endtime="20221009 16:38:54.345"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${phone_form}</arg>
+<arg>${phone}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221009 16:38:54.345" endtime="20221009 16:38:54.345"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.326" endtime="20221009 16:38:54.345"/>
+</kw>
+<kw name="Click Log Out Link" library="Login_keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221009 16:38:54.346" level="INFO">Clicking link 'Log Out'.</msg>
+<status status="PASS" starttime="20221009 16:38:54.346" endtime="20221009 16:38:54.440"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.346" endtime="20221009 16:38:54.440"/>
+</kw>
+<kw name="Verify Log Out Successful" library="Login_keywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>4x</arg>
+<arg>3</arg>
+<arg>Element Should Not Be Visible</arg>
+<arg>//a[contains(text(),'Log Out')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>//a[contains(text(),'Log Out')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20221009 16:38:54.456" level="INFO">Element '//a[contains(text(),'Log Out')]' did not exist.</msg>
+<status status="PASS" starttime="20221009 16:38:54.441" endtime="20221009 16:38:54.456"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.441" endtime="20221009 16:38:54.456"/>
+</kw>
+<status status="PASS" starttime="20221009 16:38:54.441" endtime="20221009 16:38:54.456"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221009 16:38:54.457" endtime="20221009 16:38:56.635"/>
+</kw>
+<doc>This Test case is to verify User has been successfully registered</doc>
+<status status="PASS" starttime="20221009 16:38:46.781" endtime="20221009 16:38:56.636"/>
+</test>
+<status status="PASS" starttime="20221009 16:38:36.522" endtime="20221009 16:38:56.641"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="User Registration Verification">User Registration Verification</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
