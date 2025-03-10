@@ -1,7 +1,4 @@
-# SignantHealth-Assignment
-Attended Assessment for Signant Health
-
-Assignment for Signant Health has been completed and code stored in Master branch of this repository
+My small Robot framework demo
 
 ## Requirements
 1. There is Requirements.txt file please make sure softwares are installed
